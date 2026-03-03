@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFTU LMS - National Digital Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfdfd;
+            color: #1a1a1a;
+        }
+
+        /* Sovereign Kinetic Background */
+        .sovereign-bg {
+            background: linear-gradient(-45deg, #009b44, #0f3460, #ef3340, #ffcd00);
+            background-size: 400% 400%;
+            animation: gradientFlow 15s ease infinite;
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* NEW: Liquid Spectrum Branding Text */
+        .liquid-spectrum-text {
+            background: linear-gradient(
+                to right, 
+                #00D05A 20%, 
+                #FFD700 40%, 
+                #FF3B3B 60%, 
+                #00D05A 80%
+            );
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: liquidFlow 4s linear infinite;
+            font-weight: 900;
+        }
+
+        @keyframes liquidFlow {
+            to { background-position: 200% center; }
+        }
+
+        /* NEW: Sovereign Aura - Soft Glow on Branding Areas */
+        .sovereign-aura {
+            box-shadow: 
+                15px 15px 0px 0px rgba(0, 0, 0, 1),
+                25px 25px 50px -10px rgba(59, 130, 246, 0.4);
+        }
+
+        .ethiopian-gradient {
+            background: linear-gradient(to right, #009b44 0%, #ffcd00 50%, #ef3340 100%);
+            height: 6px;
+        }
+
+        /* Neobrutalist Highlights */
+        .highlight-blue { box-shadow: inset 0 -0.5em 0 0 rgba(59, 130, 246, 0.4); }
+        .highlight-gold { box-shadow: inset 0 -0.5em 0 0 rgba(255, 205, 0, 0.4); }
+        .highlight-green { box-shadow: inset 0 -0.5em 0 0 rgba(0, 155, 68, 0.4); }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb {
+            background: #000;
+            border-radius: 10px;
+            border: 3px solid #f1f1f1;
+        }
+
+        @media print {
+            @page { size: auto; margin: 0mm; }
+            body { background-color: white !important; }
+            header, footer, nav, .no-print, button:not(.print-only) { display: none !important; }
+            .printable-transcript { width: 100% !important; border: none !important; box-shadow: none !important; }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

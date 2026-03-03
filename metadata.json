@@ -1,0 +1,26 @@
+{
+  "name": "IFTU LMS - National Digital Sovereign Education Center",
+  "short_name": "IFTU Portal",
+  "description": "National Digital Sovereign Education Center - Official LMS for Ethiopian Secondary & TVET. Managed by Jemal Fano Haji.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdfdfd",
+  "theme_color": "#009b44",
+  "icons": [
+    {
+      "src": "https://api.dicebear.com/7.x/avataaars/svg?seed=IFTU&backgroundColor=009b44",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "https://api.dicebear.com/7.x/avataaars/svg?seed=IFTU&backgroundColor=009b44",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
