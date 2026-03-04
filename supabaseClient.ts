@@ -1,8 +1,12 @@
+import { createClient } from '@supabase/supabase-js';
 
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.7';
+// Environment variables fayyadamna (NEXT_PUBLIC_ prefix ni gorfama)
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY;
 
-// Assuming these environment variables are provided similarly to the API_KEY
-const supabaseUrl = process.env.SUPABASE_URL || 'https://your-project.supabase.co';
-const supabaseKey = process.env.SUPABASE_ANON_KEY || 'your-anon-key';
+// Qindaa'uun isaa mirkaneessuuf
+export const isSupabaseConfigured = !!(supabaseUrl && supabaseKey && !supabaseUrl.includes('your-project'));
 
-export const supabase = createClient(supabaseUrl, supabaseKey);
+export const supabase = isSupabaseConfigured 
+  ? createClient(supabaseUrl!, supabaseKey!)
+  : null;
